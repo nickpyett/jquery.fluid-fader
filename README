@@ -1,0 +1,8 @@
+fluidFader
+
+@version 0.1
+@licence MIT/GPL
+@author Nick Pyett (contact@nickpyett.com)
+@website http://nickpyett.com/jquery/fluidFader
+
+fluidFader is a jQuery plugin that creates a fluid fading carousel.
