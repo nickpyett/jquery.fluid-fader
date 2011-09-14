@@ -5,4 +5,4 @@ jquery.fluid-fader
 @author Nick Pyett (contact@nickpyett.com)
 @project page http://nickpyett.com/jquery/fluidFader
 
-fluid-fader is a jQuery plugin that creates a fluid fading carousel. The javascript does not apply styles or create mark-up; an explanation of this can be found on the project page.
+fluid-fader is a jQuery plugin that creates a fluid fading carousel. The JavaScript does not apply styles or create mark-up; an explanation of this can be found on the project page.
