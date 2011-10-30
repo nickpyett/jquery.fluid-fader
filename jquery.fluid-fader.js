@@ -65,7 +65,7 @@ Project page at http://nickpyett.com/jquery/fluid-fader
 					next_frame_timeout = current_frame_var - 1;
 				}
 				
-				$(this).fluidFader('animation_action', {current_frame:current_frame_var, next_frame:next_frame_timeout});
+				$(this).fluidfader('animation_action', {current_frame:current_frame_var, next_frame:next_frame_timeout});
 			});
 			
 			// BIND FUNCTION TO RIGHT DIRECTION
@@ -73,7 +73,7 @@ Project page at http://nickpyett.com/jquery/fluid-fader
 				
 				e.preventDefault();
 				
-				$(this).fluidFader('animation_action', {current_frame:current_frame_var, next_frame:next_frame_var});
+				$(this).fluidfader('animation_action', {current_frame:current_frame_var, next_frame:next_frame_var});
 			});
 			
 			// BIND FUNCTION TO FRAME LINKS
@@ -84,7 +84,7 @@ Project page at http://nickpyett.com/jquery/fluid-fader
 				link_index = $(this).index() + 1;
 				
 				if ( link_index != current_frame_var ) {
-					$(this).fluidFader('animation_action', {current_frame:current_frame_var, next_frame:link_index});					
+					$(this).fluidfader('animation_action', {current_frame:current_frame_var, next_frame:link_index});					
 				}
 			});
 			
@@ -100,16 +100,16 @@ Project page at http://nickpyett.com/jquery/fluid-fader
 				$('#fluid-fader-links').show();
 				$('#fluid-fader-links a:nth-child(1)').addClass('current');
 				
-				timeout = window.setTimeout("$(this).fluidFader('animation_action', {current_frame:1, next_frame:2});", interval);
+				timeout = window.setTimeout("$(this).fluidfader('animation_action', {current_frame:1, next_frame:2});", interval);
 				
-			} else $.error('fluidFader.js says: "Only one or less frames, so no fading animation."');
+			} else $.error('fluidfader.js says: "Only one or less frames, so no fading animation."');
 		},
 		animation_action : function(options){
 			
 			// VALIDATE PASSED INCREMENTS
 			if ( parseInt(options.current_frame) == 'NaN' || options.next_frame == 'NaN' || options.current_frame > frame_count || options.next_frame > frame_count || options.current_frame < 1 || options.next_frame < 1 ) {
 	
-				$.error('fluidFader.js says: "There is a problem with the animation, please check the mark-up of your frames."');
+				$.error('fluidfader.js says: "There is a problem with the animation, please check the mark-up of your frames."');
 			} else if ( allow_animation === true ) {
 				
 				// DON'T ALLOW ANY ANIMATIONS WHILE THERE IS A CURRENT ANIMATION
@@ -127,7 +127,7 @@ Project page at http://nickpyett.com/jquery/fluid-fader
 				$('#fluid-fader-frames div:nth-child(' + options.next_frame + ')').css('z-index', 2001);
 				
 				// CALL ANIMATION
-				$(this).fluidFader('animation_type_' + animation_type, options);
+				$(this).fluidfader('animation_type_' + animation_type, options);
 			}
 		},
 		next_animation : function(options) {
@@ -149,7 +149,7 @@ Project page at http://nickpyett.com/jquery/fluid-fader
 			}
 
 			// SET INTERVAL TO FADE IMAGES ONLY AFTER FADE IN HAS OCCURED
-			timeout = window.setTimeout("$(this).fluidFader('animation_action', {current_frame:" + current_frame_var + ", next_frame:" + next_frame_var + "});", interval);
+			timeout = window.setTimeout("$(this).fluidfader('animation_action', {current_frame:" + current_frame_var + ", next_frame:" + next_frame_var + "});", interval);
 			
 			// ALLOW ANIMATIONS
 			allow_animation = true;
@@ -162,7 +162,7 @@ Project page at http://nickpyett.com/jquery/fluid-fader
 				// FADE OUT CURRENT FRAME
 				$('#fluid-fader-frames div:nth-child(' + options.current_frame + ')').fadeOut(speed/2, function(){
 					
-					$(this).fluidFader('next_animation', options);
+					$(this).fluidfader('next_animation', options);
 				});
 
 			});
@@ -176,21 +176,21 @@ Project page at http://nickpyett.com/jquery/fluid-fader
 				// FADE OUT CURRENT FRAME
 				$('#fluid-fader-frames div:nth-child(' + options.next_frame + ')').fadeIn(speed, function(){
 					
-					$(this).fluidFader('next_animation', options);
+					$(this).fluidfader('next_animation', options);
 				});
 
 			});
 		}
 	};
 
-	$.fn.fluidFader = function( method ) {
+	$.fn.fluidfader = function( method ) {
 
 		if ( methods[method] ) {
 			return methods[method].apply( this, Array.prototype.slice.call( arguments, 1 ));
 		} else if ( typeof method === 'object' || ! method ) {
 			return methods.init.apply( this, arguments );
 		} else {
-			$.error( 'Method ' + method + ' does not exist on fluidFader' );
+			$.error( 'Method ' + method + ' does not exist on fluidfader' );
 		}	 
 
 	};
