@@ -1,0 +1,86 @@
+.fluid-fader
+{
+	position: relative;
+	width: 100%;
+	padding-bottom: 48.33%; /* HEIGHT/WIDTH * 100% OR (290 pixels / 600 pixels) * 100% = 48.33% */
+	display: none;
+}
+
+.fluid-fader-frames
+{
+	width: 100%;
+	position: relative;
+}
+
+.fluid-fader-frames div
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #DEDEDE;
+}
+
+.fluid-fader-links
+{
+	position: absolute;
+	bottom: 12px;
+	left: 12px;
+	z-index: 2003; /* HIGER THAN FRAMES */
+	display: none;
+}
+
+.fluid-fader-links a
+{
+	background-color: #666;
+	display: block;
+	float: left;
+	font-size: 1px;
+	height: 6px;
+	margin-right: 6px;
+	width: 6px;
+	border: 1px solid #fff;
+}
+
+.fluid-fader-links a:hover
+{
+	background-color: #2200C1;
+}
+
+.fluid-fader-links a.current
+{
+	background-color: #EB7E21;
+}
+
+.fluid-fader .fluid-fader-direction-left
+{
+	position: absolute;
+	top: 60%;
+	left: -40px;
+	background-color: #666;
+	color: #fff;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	z-index: 2004;
+}
+
+.fluid-fader .fluid-fader-direction-right
+{
+	position: absolute;
+	top: 60%;
+	right: -40px;
+	background-color: #666;
+	color: #fff;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	z-index: 2004;
+}

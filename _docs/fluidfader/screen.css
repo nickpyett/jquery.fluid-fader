@@ -1,0 +1,147 @@
+/* 3 */
+
+/* RESET */
+
+* { margin: 0; padding: 0; }
+
+
+/* CLEARFIX */
+
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; visibility: hidden; } 
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
+/* PARENT ELEMENTS */
+
+body
+{
+	text-align: center;
+	font-family: Georgia, serif;
+	font-size: 100%;
+	border-top: 2px solid #EB7E21;
+}
+
+
+/* BLOCK LEVEL ELEMENTS */
+
+h1, h2
+{
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+h1
+{
+	font-size: 2.4em;
+	text-align: center;
+}
+
+h2
+{
+	font-family: Georgia, serif;
+	text-align: center;
+	line-height: 1.8em;
+	font-style: italic;
+	font-weight: normal;
+	color: #EB7E21;
+}
+
+p, ul, dl, pre
+{
+	line-height: 1.4em;
+	color: #333;
+	margin: 1.2em 0;
+}
+
+dl
+{
+	padding: 16px;
+	border: 1px solid #DEDEDE;
+}
+
+dl dd dl
+{
+	padding: 0;
+	border: none;
+	margin: 0;
+}
+
+dt
+{
+	font-weight: bold;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+dd
+{
+	margin-left: 16px;
+}
+
+pre
+{
+	overflow: scroll;
+}
+
+ul
+{
+	padding-left: 16px;
+}
+
+p.first
+{
+	margin-top: 0;
+}
+
+p.last
+{
+	margin-bottom: 0;
+}
+
+/* TEXT LEVEL ELEMENTS */
+
+img.fluid
+{
+	width: 100%;
+}
+
+a
+{
+	color: #2200C1;
+}
+
+
+/* LAYOUT */
+
+.row
+{
+	width: 100%;
+	text-align: center;
+	padding: 20px 0;
+}
+
+.center
+{
+	width: 75%;
+	text-align: left;
+	margin: 0 auto;
+}
+
+
+/* PAGE SECTIONING */
+
+.content
+{
+	background-color: #DEDEDE;
+}
+
+.footer
+{
+	border-top: 1px solid #EB7E21;
+	margin-top: 20px;
+	font-size: 0.875em;
+}
+
+.footer .wish
+{
+	font-size: 0.769em;
+}

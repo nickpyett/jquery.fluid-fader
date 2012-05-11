@@ -1,8 +1,9 @@
 /*********************
 Fluid Fader is a jQuery plugin that creates a fluid fading carousel. 
 
+@version 0.1
 @licence MIT/GPL
-@copyright Nick Pyett (contact@nickpyett.com)
+@author Nick Pyett (contact@nickpyett.com)
 
 Fork on GitHub at http://github.com/nickpyett/jquery.fluid-fader
 Project page at http://nickpyett.com/jquery/fluid-fader
@@ -28,6 +29,7 @@ Project page at http://nickpyett.com/jquery/fluid-fader
 					speed = options.speed;
 				} else speed = 500;
 				
+				// WRITE ANIMATION TYPE
 				if ( options.animation_type != '' && typeof options.animation_type != 'undefined' ) {
 					animation_type = options.animation_type;
 				} else animation_type = 'fade';
@@ -43,7 +45,7 @@ Project page at http://nickpyett.com/jquery/fluid-fader
 			// COUNT ALL FRAMES
 			frame_count = $('#fluid-fader-frames > div').size();
 			
-			// SET CURRENT FRAME
+			// SET CURRENT & NEXT FRAME
 			current_frame_var = 1;
 			next_frame_var = 2;
 			
@@ -169,10 +171,10 @@ Project page at http://nickpyett.com/jquery/fluid-fader
 		},
 		animation_type_flash : function(options) {
 			
-			// FADE IN NEW IMAGE
+			// HIDE CURRENT FRAME
 			$('#fluid-fader-frames div:nth-child(' + options.current_frame + ')').hide(0, function(){
 	
-				// FADE OUT CURRENT FRAME
+				// FADE IN NEXT FRAME
 				$('#fluid-fader-frames div:nth-child(' + options.next_frame + ')').fadeIn(speed, function(){
 					
 					$(this).fluidfader('next_animation', options);
